@@ -22,12 +22,13 @@ ActiveRecord::Schema.define(:version => 20130228131731) do
   create_table "admin_users", :force => true do |t|
     t.string   "username"
     t.string   "hashed_password"
-    t.string   "admin_role_id"
+    t.integer  "admin_role_id"
+    t.string   "salt"
+    t.string   "email"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
 
-  add_index "admin_users", ["admin_role_id"], :name => "index_admin_users_on_role_id"
   add_index "admin_users", ["username"], :name => "index_admin_users_on_username"
 
 end
