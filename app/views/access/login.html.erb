@@ -1,6 +1,7 @@
-<%= @page_title ='Log in'%>
-<h2>Login</h2>
-<div id="login-container">
+
+
+<article id="login-container">
+	<h2>Login</h2>
 	<%=form_tag(:action => 'attempt_login') do%>
 	<table >
 		<tr><td><%= label_tag(:username) %></td><td><%= text_field_tag(:username)  %></td></tr>
@@ -9,4 +10,4 @@
 	</table>	
 	<% end %> 
 	
-</div>
+</article>

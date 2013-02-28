@@ -1,0 +1,24 @@
+<div id='center'>
+		<%= link_to(image_tag('rails.png', :class => 'logo' ) , :action=>'index')%> 
+		<nav id='menu'>
+			<ul>
+				<li><%= link_to(:action => 'index') do %>
+					  <span>Home</span>
+					  <% end %>
+					  </li>
+				<li><%= link_to(:action => 'dashboard') do %>
+					<span>Dashboard</span>
+					<% end %>
+				</li>
+				<li><%= link_to(:action => 'contact') do %>
+					<span>Contact</span>
+					<% end %>					
+				</li>
+				<li><%= link_to( :action => 'logout') do %>
+					<span>Logout</span>
+					<% end %>
+				</li>
+			</ul>
+			
+		</nav>
+	</div>

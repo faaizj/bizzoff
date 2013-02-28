@@ -7,16 +7,16 @@
 <%= javascript_include_tag 'application' %>
 </head>
 <body>
-	<header id='header'>   
-	<%= render(:partial => 'logged', :locals => )%>
-	</header>
- 
- % if !flash[:notice].blank? %>
-<div class="notice">
-<%= flash[:notice] %>
-</div>
-<% end %>
-<footer> Copyrights tekCloud.com 2013. Developed on ruby on rails framework! </footer>
- 
+<header>
+	<%= render  :partial => 'shared/header' %>
+</header>
+<section id='notice'>
+		<%= render  :partial => 'shared/flashmsg' %>
+</section>
+<section id='toprow'><%= yield %></section>
+<section id='middlerow'></section>
+<section id='bottomrow'></section>
+		
+<footer id='footer'> Copyrights tekCloud.com 2013. Developed on ruby on rails framework! </footer> 
 </body>
 </html>

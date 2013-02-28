@@ -4,7 +4,7 @@ class AccessController < ApplicationController
   end
   
   def index
-    redirect('dashboard')
+    redirect_to(:action=>'dashboard')
   end
   
   def login
