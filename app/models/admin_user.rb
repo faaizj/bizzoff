@@ -1,30 +1,31 @@
 class AdminUser < ActiveRecord::Base
   attr_accessible :username
-  attr_accessor :pwd 
-  
-  
+  attr_accessor :pwd  
   attr_protected :hashed_password,:salt
   
-  belongs_to :admin_role  
-  validates :username, :presence => true , :length => {:within => 8..25 } , :uniqueness => true
-  validates :email , :uniqueness => true, :length =>{:maximum => 150 } 
-  validates :admin_role_id, :presence => true
-   validates_length_of :pwd, :within => 8..25, :on => :create
+  belongs_to :admin_role 
+  validates_presence_of :admin_role
+
    
+  validates :username, :presence => true , :length => {:within => 8..25 } , :uniqueness => true
+  validates :email , :uniqueness => true, :length =>{:maximum => 150 } , :presence => false
+ 
+   validates_length_of :pwd, :within => 8..25, :on => :save 
+    
    before_save :create_hashed_password
    after_save :clear_password
-   
-   
+    
 def password_match?(pwd="")
   # '==' means its a boolean expression and the result is always boolean
    hashed_password == AdminUser.hash_with_salt(pwd,salt)
    
 end
-
-
-
+ 
 def self.hash_with_salt(pwd="",salt="")
-  Digest::SHA1.hexdigest("Put #{salt} on the #{pwd}")
+  unless pwd.blank?
+    Digest::SHA1.hexdigest("This will be my #{salt} on the #{pwd} according to #{Date.today}")
+  end
+  
 end
 
 def self.make_salt(username="")

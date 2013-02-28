@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="en">
+<head>
+<title>CardSYS| <%= @page_title || 'Admin area' %></title>
+<%= stylesheet_link_tag('application', :media=>'all') %>
+<%= javascript_include_tag 'application' %>
+</head>
+<body>
+	<header id='header'>   
+	<%= render(:partial => 'logged', :locals => )%>
+	</header>
+ 
+ % if !flash[:notice].blank? %>
+<div class="notice">
+<%= flash[:notice] %>
+</div>
+<% end %>
+<footer> Copyrights tekCloud.com 2013. Developed on ruby on rails framework! </footer>
+ 
+</body>
+</html>
