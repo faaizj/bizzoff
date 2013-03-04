@@ -1,4 +1,6 @@
 class AccessController < ApplicationController
+ before_filter :confirm_logged_in, :except =>[:login,:logout,:attempt_login]
+  
  layout('admin')
   def dashboard
   end
