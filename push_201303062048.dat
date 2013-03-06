@@ -1,0 +1,1 @@
+{"klass":"Taps::Push","database_url":"postgres://cardman:cardman@127.0.0.1/db_cns_dev?encoding=utf8","remote_url":"http://heroku:osui59a24am79x@taps19.heroku.com","session_uri":"/sessions/1918124803","stream_state":{},"completed_tables":["schema_migrations"],"table_filter":null,"local_tables_info":{"schema_migrations":3,"admin_users":2,"admin_roles":2}}
