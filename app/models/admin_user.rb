@@ -6,7 +6,7 @@ class AdminUser < ActiveRecord::Base
   belongs_to :admin_role 
   validates_presence_of :admin_role
 
-   
+  
   validates :username, :presence => true , :length => {:within => 8..25 } , :uniqueness => true
   validates :email , :uniqueness => true, :length =>{:maximum => 150 } , :presence => false
  
