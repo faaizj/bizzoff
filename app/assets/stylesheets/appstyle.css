@@ -84,8 +84,38 @@ input, textarea {
     width: 99%;
 }
 
-#top-menu 
+#topmenu 
 {
-	background:#d0edfe;
-	
+	 padding: 10px 10px 20px 10px;
+	display:box;
+	position:relative	;
+	background-color:#d0edfe; display:block;	
+	color:#666666;
 }
+
+#logo
+{
+height: 10%;
+width:15%;	
+}
+
+#topmenu ul li{display:inline; float:right; position:relative;}
+#topmenu ul li span{font-family:Calibri;}
+#topmenu ul li a {padding:2px 2px 2px 2px;text-decoration:none; background:#d0edfe; color:inherit; }
+#topmenu ul li a:hover { background:#8ebfa0; }
+#topmenu ul li a:visited { color:inherit; }
+
+ 
+#login-container {  display:table; -webkit-border-radius: 4px;border-radius: 4px; right:50%;    border: 1px solid #ffba00;     padding: 10px; margin:5px;}
+#login-container h2 {position:inherit; text-align:center;   margin:2px; padding:2px;   background:#ffba00; } 
+
+.notice {background:#F29202; z-index:1; display:block; width:100%; height:20px; transparent:40%; text-align:center; vertical-align: middle; float:center;}
+.notice span{font-family:Verdana, Geneva, Arial, Helvetica, sans-serif; font-size:0.9em; font-style:italic; overflow:none;}
+
+label{font-family:Verdana; font-size:11pt;}
+.foot
+{background:#8ebfa0; position:fixed;}
+
+ 
+	#toprow {height:372px;border-top:solid 1px #1d1d1d;background: #FFFFFF    repeat-x; }
+ 
